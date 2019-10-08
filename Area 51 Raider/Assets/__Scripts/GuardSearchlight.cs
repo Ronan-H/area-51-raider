@@ -18,7 +18,7 @@ public class GuardSearchlight : MonoBehaviour
     {
         lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
-        lineRenderer.widthMultiplier = 0.03f;
+        lineRenderer.widthMultiplier = 0.1f;
         lineRenderer.positionCount = segments;
         lineRenderer.startColor = Color.yellow;
         lineRenderer.endColor = Color.yellow;
@@ -27,7 +27,7 @@ public class GuardSearchlight : MonoBehaviour
     
     void Update()
     {
-        segments = (int)Mathf.Max(Mathf.Ceil(fov / 10), 3);
+        segments = (int)Mathf.Max(Mathf.Ceil(fov / 8), 3);
         DrawSearchlight();
     }
 
@@ -53,5 +53,47 @@ public class GuardSearchlight : MonoBehaviour
         for (int i = 0; i < arcPoints.Count; i++) {
             lineRenderer.SetPosition(i, arcPoints[i]);
         }
+    }
+
+    void FixedUpdate()
+    {
+        if (CanSeePlayer())
+        {
+            lineRenderer.startColor = Color.red;
+            lineRenderer.endColor = Color.red;
+        }
+        else
+        {
+            lineRenderer.startColor = Color.yellow;
+            lineRenderer.endColor = Color.yellow;
+        }
+    }
+
+    bool CanSeePlayer()
+    {
+        float guardAngle = gameObject.GetComponent<GuardMovement>().angle;
+        float currAngle;
+        for (int i = 0; i <= segments; i++)
+        {
+            currAngle = guardAngle
+                  + (fov / 2)
+                  - i * (fov / segments);
+
+            Vector2 rayAngle = new Vector2(Mathf.Cos(currAngle * Mathf.Deg2Rad), Mathf.Sin(currAngle * Mathf.Deg2Rad));
+
+            float toX = transform.position.x + Mathf.Cos(Mathf.Deg2Rad * currAngle) * searchDist;
+            float toY = transform.position.y + Mathf.Sin(Mathf.Deg2Rad * currAngle) * searchDist;
+            Vector2 lineTo = new Vector2(toX, toY);
+            RaycastHit2D hit = Physics2D.Linecast(transform.position, lineTo);
+
+            Debug.DrawLine(transform.position, lineTo);
+
+            if (hit.collider != null && hit.collider.gameObject.tag == "Player")
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
