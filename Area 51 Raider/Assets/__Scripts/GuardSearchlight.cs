@@ -34,16 +34,17 @@ public class GuardSearchlight : MonoBehaviour
     void DrawSearchlight()
     {
         List<Vector2> arcPoints = new List<Vector2>();
-        float angle;
+        float guardAngle = gameObject.GetComponent<GuardMovement>().angle;
+        float currAngle;
         arcPoints.Add(transform.position);
         for (int i = 0; i <= segments; i++)
         {
-            angle = transform.rotation.eulerAngles.z
+            currAngle = guardAngle
                   + (fov / 2)
                   - i * (fov / segments);
 
-            float x = transform.position.x + Mathf.Cos(Mathf.Deg2Rad * angle) * searchDist;
-            float y = transform.position.y + Mathf.Sin(Mathf.Deg2Rad * angle) * searchDist;
+            float x = transform.position.x + Mathf.Cos(Mathf.Deg2Rad * currAngle) * searchDist;
+            float y = transform.position.y + Mathf.Sin(Mathf.Deg2Rad * currAngle) * searchDist;
 
             arcPoints.Add(new Vector2(x, y));
         }

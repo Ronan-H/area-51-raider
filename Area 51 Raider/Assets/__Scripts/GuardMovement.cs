@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GuardMovement : MonoBehaviour
 {
+    public float angle;
+
     [SerializeField]
     private float speed;
 
@@ -32,9 +34,7 @@ public class GuardMovement : MonoBehaviour
         float yDist = currWaypoint.position.y - transform.position.y;
         float xDist = currWaypoint.position.x - transform.position.x;
 
-        float newAngle = Mathf.Atan2(yDist, xDist) * Mathf.Rad2Deg;
-
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, newAngle));
+        angle = Mathf.Atan2(yDist, xDist) * Mathf.Rad2Deg;
 
         if (Vector2.Distance(transform.position, currWaypoint.position) < 0.1f)
         {
