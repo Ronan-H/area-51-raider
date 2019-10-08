@@ -26,9 +26,17 @@ public class GuardMovement : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].position, speed * Time.deltaTime);
+        Transform currWaypoint = waypoints[waypointIndex];
+        transform.position = Vector2.MoveTowards(transform.position, currWaypoint.position, speed * Time.deltaTime);
 
-        if (Vector2.Distance(transform.position, waypoints[waypointIndex].position) < 0.1f)
+        float yDist = currWaypoint.position.y - transform.position.y;
+        float xDist = currWaypoint.position.x - transform.position.x;
+
+        float newAngle = Mathf.Atan2(yDist, xDist) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, newAngle));
+
+        if (Vector2.Distance(transform.position, currWaypoint.position) < 0.1f)
         {
             waypointIndex = (waypointIndex + 1) % waypoints.Length;
         }
