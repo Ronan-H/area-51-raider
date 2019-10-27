@@ -124,6 +124,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  startIndex: 0
 --- !u!114 &716737731550446610
 MonoBehaviour:
   m_ObjectHideFlags: 0
