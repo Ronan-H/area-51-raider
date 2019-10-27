@@ -12,6 +12,9 @@ public class GuardMovement : MonoBehaviour
     [SerializeField]
     private GameObject[] waypointObjects;
 
+    [SerializeField]
+    private GameObject startPoint = null;
+
     private Rigidbody2D rb2d;
     private Transform[] waypoints;
     private int waypointIndex;
@@ -23,6 +26,16 @@ public class GuardMovement : MonoBehaviour
         for (int i = 0; i < waypoints.Length; i++)
         {
             waypoints[i] = waypointObjects[i].transform;
+        }
+
+        if (startPoint == null)
+        {
+            // start point not defined; start at first waypoint instead
+            transform.position = waypointObjects[0].transform.position;
+        }
+        else
+        {
+            transform.position = startPoint.transform.position;
         }
     }
 
