@@ -16,9 +16,13 @@ public class CameraFollow : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 target = follow.position + offset;
-        Vector3 interPosition = Vector3.Lerp(transform.position, follow.position, moveSpeed);
-        interPosition.z = -10;
-        transform.position = interPosition;
+        // only follow if following Transform has been set
+        if (follow != null)
+        {
+            Vector3 target = follow.position + offset;
+            Vector3 interPosition = Vector3.Lerp(transform.position, follow.position, moveSpeed);
+            interPosition.z = -10;
+            transform.position = interPosition;
+        }
     }
 }
