@@ -8,6 +8,8 @@ public class GuardSearchlight : MonoBehaviour
     private float fov;
 
     [SerializeField]
+    private float baseSearchDist;
+
     private float searchDist;
 
     private int segments;
@@ -28,6 +30,7 @@ public class GuardSearchlight : MonoBehaviour
     void Update()
     {
         segments = (int)Mathf.Max(Mathf.Ceil(fov / 8), 3);
+        searchDist = baseSearchDist * gameObject.GetComponent<GuardMovement>().angleOffset;
         DrawSearchlight();
     }
 

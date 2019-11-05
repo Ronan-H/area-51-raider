@@ -5,6 +5,7 @@ using UnityEngine;
 public class GuardMovement : MonoBehaviour
 {
     public float angle;
+    public float angleOffset;
 
     [SerializeField]
     private float speed;
@@ -40,7 +41,11 @@ public class GuardMovement : MonoBehaviour
         float yDist = currWaypoint.position.y - transform.position.y;
         float xDist = currWaypoint.position.x - transform.position.x;
 
-        angle = Mathf.Atan2(yDist, xDist) * Mathf.Rad2Deg;
+        float targetAngle = Mathf.Atan2(yDist, xDist) * Mathf.Rad2Deg;
+
+        angle = Mathf.LerpAngle(angle, targetAngle, 0.02f);
+
+        angleOffset = Mathf.Clamp(1 - (Mathf.Abs(Mathf.DeltaAngle(angle, targetAngle)) / 90), 0.3f, 1);
 
         if (Vector2.Distance(transform.position, currWaypoint.position) < 0.1f)
         {
