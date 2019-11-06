@@ -22,8 +22,6 @@ public class GuardSearchlight : MonoBehaviour
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         lineRenderer.widthMultiplier = 0.1f;
         lineRenderer.positionCount = segments;
-        lineRenderer.startColor = Color.yellow;
-        lineRenderer.endColor = Color.yellow;
         lineRenderer.loop = true;
     }
     
@@ -61,6 +59,11 @@ public class GuardSearchlight : MonoBehaviour
     void FixedUpdate()
     {
         if (CanSeePlayer())
+        {
+            GameState.PlayerSeen = true;
+        }
+
+        if (GameState.PlayerSeen)
         {
             lineRenderer.startColor = Color.red;
             lineRenderer.endColor = Color.red;
