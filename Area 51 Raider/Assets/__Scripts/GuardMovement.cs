@@ -45,9 +45,10 @@ public class GuardMovement : MonoBehaviour
         {
             MoveTowardsTransform(playerTransform, 2);
 
-            if (Vector2.Distance(transform.position, playerTransform.position) < 1.2f)
+            if (Vector2.Distance(transform.position, playerTransform.position) < 0.8f)
             {
                 SceneManager.LoadScene(sceneName: "Level1");
+                GameState.ResetAll();
             }
         }
         else

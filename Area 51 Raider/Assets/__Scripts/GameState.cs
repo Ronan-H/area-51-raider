@@ -5,4 +5,9 @@ using UnityEngine;
 public class GameState : MonoBehaviour
 {
     public static bool PlayerSeen { get; set; }
+
+    public static void ResetAll()
+    {
+        PlayerSeen = false;
+    }
 }
