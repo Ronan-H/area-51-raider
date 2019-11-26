@@ -16,6 +16,8 @@ public class GuardSearchlight : MonoBehaviour
 
     private LineRenderer lineRenderer;
 
+    private PlayerMovement playerMovement;
+
     void Start()
     {
         lineRenderer = gameObject.AddComponent<LineRenderer>();
@@ -23,6 +25,8 @@ public class GuardSearchlight : MonoBehaviour
         lineRenderer.widthMultiplier = 0.1f;
         lineRenderer.positionCount = segments;
         lineRenderer.loop = true;
+        
+        playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
     }
     
     void Update()
@@ -77,6 +81,11 @@ public class GuardSearchlight : MonoBehaviour
 
     bool CanSeePlayer()
     {
+        if (playerMovement.inBox && playerMovement.rb2d.velocity.magnitude < 0.1)
+        {
+            return false;
+        }
+
         float guardAngle = gameObject.GetComponent<GuardMovement>().angle;
         float currAngle;
         for (int i = 0; i <= segments; i++)

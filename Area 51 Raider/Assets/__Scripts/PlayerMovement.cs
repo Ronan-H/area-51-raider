@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float speed;
+    public float speed;
 
     public bool inBox = false;
 
-    private Rigidbody2D rb2d;
+    public Rigidbody2D rb2d;
 
     void Start()
     {
@@ -27,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         float verticalMag = Input.GetAxis("Vertical");
 
         Vector2 movement = new Vector2(horizMag, verticalMag);
-        rb2d.AddForce(movement * speed);
+        rb2d.AddForce(movement * (inBox ? speed / 2 : speed));
     }
 
     public void EnterBox(GameObject box)
