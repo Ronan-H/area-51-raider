@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed;
 
+    public bool inBox = false;
+
     private Rigidbody2D rb2d;
 
     void Start()
@@ -26,5 +28,12 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 movement = new Vector2(horizMag, verticalMag);
         rb2d.AddForce(movement * speed);
+    }
+
+    public void EnterBox(GameObject box)
+    {
+        gameObject.transform.position = box.transform.position;
+        GetComponent<SpriteRenderer>().sprite = box.GetComponent<SpriteRenderer>().sprite;
+        inBox = true;
     }
 }
