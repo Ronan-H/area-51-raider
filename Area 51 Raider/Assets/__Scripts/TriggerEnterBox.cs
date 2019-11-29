@@ -4,14 +4,24 @@ using UnityEngine;
 
 public class TriggerEnterBox : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    private bool jumpReleased = false;
+
+    private void Update()
     {
-        if (other.gameObject.tag == "Player")
+        if (!jumpReleased && !Input.GetButton("Jump"))
         {
-            PlayerMovement playerMovement = other.gameObject.GetComponent<PlayerMovement>();
-            if (!playerMovement.inBox)
+            jumpReleased = true;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player" && Input.GetButton("Jump") && jumpReleased)
+        {
+            PlayerBox playerBox = other.gameObject.GetComponent<PlayerBox>();
+            if (!playerBox.inBox)
             {
-                playerMovement.EnterBox(gameObject);
+                playerBox.EnterBox(gameObject);
                 Destroy(gameObject);
             }
         }
