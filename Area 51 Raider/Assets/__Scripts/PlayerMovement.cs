@@ -25,6 +25,6 @@ public class PlayerMovement : MonoBehaviour
 
         bool inBox = gameObject.GetComponent<PlayerBox>().inBox;
         Vector2 movement = new Vector2(horizMag, verticalMag);
-        rb2d.AddForce(movement * (inBox ? speed / 2 : speed));
+        rb2d.AddForce(movement * (inBox ? speed * 0.7f : speed));
     }
 }

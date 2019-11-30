@@ -34,7 +34,7 @@ public class GuardSearchlight : MonoBehaviour
     
     void Update()
     {
-        segments = (int)Mathf.Max(Mathf.Ceil(fov / 8), 3);
+        segments = (int)Mathf.Max(Mathf.Ceil(fov / 5), 3);
         searchDist = baseSearchDist * gameObject.GetComponent<GuardMovement>().angleOffset;
         DrawSearchlight();
     }

@@ -28,7 +28,8 @@ public class PlayerBox : MonoBehaviour
         if (Input.GetButton("Jump") && inBox && jumpReleased)
         {
             GetComponent<SpriteRenderer>().sprite = playerSprite;
-            GameObject newBox = Instantiate(boxPrefab, gameObject.transform.position, Quaternion.identity);
+            GameObject newBox = Instantiate(boxPrefab, gameObject.transform.position, gameObject.transform.rotation);
+            newBox.GetComponent<Rigidbody2D>().velocity = -gameObject.GetComponent<Rigidbody2D>().velocity * 2;
             inBox = false;
             jumpReleased = false;
         }

@@ -5,11 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class TriggerNextLevel : MonoBehaviour
 {
+    [SerializeField]
+    private string sceneName;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(sceneName: "Level2");
+            SceneManager.LoadScene(sceneName: sceneName);
         }
     }
 }
