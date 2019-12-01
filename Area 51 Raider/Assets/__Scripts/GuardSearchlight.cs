@@ -68,6 +68,7 @@ public class GuardSearchlight : MonoBehaviour
         if (CanSeePlayer())
         {
             GameState.PlayerSeen = true;
+            GameObject.FindObjectOfType<SoundManager>().LoopSiren();
         }
 
         if (GameState.PlayerSeen)
