@@ -25,6 +25,17 @@ public class PlayerMovement : MonoBehaviour
 
         bool inBox = gameObject.GetComponent<PlayerBox>().inBox;
         Vector2 movement = new Vector2(horizMag, verticalMag);
-        rb2d.AddForce(movement * (inBox ? speed * 0.7f : speed));
+
+        float trueSpeed = speed;
+        if (inBox)
+        {
+            trueSpeed *= 0.7f;
+        }
+        if (PlayerItems.HasItem("RunningShoes"))
+        {
+            trueSpeed *= 1.5f;
+        }
+
+        rb2d.AddForce(movement * trueSpeed);
     }
 }

@@ -85,7 +85,8 @@ public class GuardSearchlight : MonoBehaviour
 
     bool CanSeePlayer()
     {
-        if (playerBox.inBox && playerMovement.rb2d.velocity.magnitude < 0.5)
+        // playerMovement.rb2d.velocity.magnitude < 0.5
+        if (playerBox.inBox && Input.GetAxis("Horizontal") <= 0.2 && Input.GetAxis("Vertical") <= 0.2)
         {
             return false;
         }

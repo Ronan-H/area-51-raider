@@ -37,8 +37,8 @@ public class SoundManager : MonoBehaviour
     {
         if (!StrangerThingsMusic.isPlaying)
         {
-            StrangerThingsMusic.loop = true;
-            StrangerThingsMusic.Play();
+            //StrangerThingsMusic.loop = true;
+            //StrangerThingsMusic.Play();
         }
     }
 
