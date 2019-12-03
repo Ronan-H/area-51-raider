@@ -18,6 +18,9 @@ public class GuardMovement : MonoBehaviour
     private Transform playerTransform;
 
     [SerializeField]
+    private bool visitsWaypointsRandomly = false;
+
+    [SerializeField]
     private int startIndex = 0;
 
     private Rigidbody2D rb2d;
@@ -35,6 +38,11 @@ public class GuardMovement : MonoBehaviour
             waypoints[i] = waypointObjects[i].transform;
         }
 
+        if (visitsWaypointsRandomly)
+        {
+            startIndex = UnityEngine.Random.Range(0, waypoints.Length);
+        }
+
         transform.position = waypointObjects[startIndex].transform.position;
         waypointIndex = startIndex;
     }
@@ -43,7 +51,7 @@ public class GuardMovement : MonoBehaviour
     {
         if (GameState.PlayerSeen)
         {
-            MoveTowardsTransform(playerTransform, 2);
+            MoveTowardsTransform(playerTransform, Mathf.Clamp(speed * 2, 4, 7));
 
             if (Vector2.Distance(transform.position, playerTransform.position) < 0.8f)
             {
@@ -54,18 +62,24 @@ public class GuardMovement : MonoBehaviour
         else
         {
             Transform currWaypoint = waypoints[waypointIndex];
-            MoveTowardsTransform(currWaypoint, 1);
+            MoveTowardsTransform(currWaypoint, speed);
 
             if (Vector2.Distance(transform.position, currWaypoint.position) < 0.1f)
             {
-                waypointIndex = (waypointIndex + 1) % waypoints.Length;
+                if (visitsWaypointsRandomly) {
+                    waypointIndex = UnityEngine.Random.Range(0, waypoints.Length);
+                }
+                else
+                {
+                    waypointIndex = (waypointIndex + 1) % waypoints.Length;
+                }
             }
         }
     }
 
-    private void MoveTowardsTransform(Transform t, float speedModifier)
+    private void MoveTowardsTransform(Transform t, float atSpeed)
     {
-        transform.position = Vector2.MoveTowards(transform.position, t.position, speed * Time.deltaTime * speedModifier);
+        transform.position = Vector2.MoveTowards(transform.position, t.position, atSpeed * Time.deltaTime);
 
         float yDist = t.position.y - transform.position.y;
         float xDist = t.position.x - transform.position.x;
