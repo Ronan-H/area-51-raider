@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/__Scenes/SplashScreen.unity
     guid: f45b489325b17594895233d733ea212c
   - enabled: 1
+    path: Assets/__Scenes/MainMenu.unity
+    guid: cde9cd599ea8de54e8c7c38b362cae7c
+  - enabled: 1
     path: Assets/__Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -23,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/__Scenes/Level5.unity
     guid: 1a16c226bd0472f40923dd7fa18e003d
+  - enabled: 1
+    path: Assets/__Scenes/YouWin.unity
+    guid: 43f9ec8a020fb17409668c1dec930a10
   m_configObjects: {}

@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (PlayerItems.HasItem("RunningShoes"))
         {
-            trueSpeed *= 1.5f;
+            trueSpeed *= 1.2f;
         }
 
         rb2d.AddForce(movement * trueSpeed);

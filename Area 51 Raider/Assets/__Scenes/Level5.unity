@@ -1690,7 +1690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1115576832, guid: 13ab062448be85844a961a4bc852b511, type: 3}
       propertyPath: sceneName
-      value: Level1
+      value: YouWin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13ab062448be85844a961a4bc852b511, type: 3}

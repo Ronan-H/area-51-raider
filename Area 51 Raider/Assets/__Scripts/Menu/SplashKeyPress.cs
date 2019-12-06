@@ -15,7 +15,7 @@ public class SplashKeyPress : MonoBehaviour
         || Input.GetMouseButtonDown(1)
         || Input.GetMouseButtonDown(2)))
         {
-            SceneManager.LoadScene(sceneName: "Level1");
+            SceneManager.LoadScene(sceneName: "MainMenu");
         }
     }
 }
