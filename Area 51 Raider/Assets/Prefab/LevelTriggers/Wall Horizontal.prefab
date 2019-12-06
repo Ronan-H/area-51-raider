@@ -90,6 +90,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6299335535044953749, guid: 8e7d27c7d5d2eb44da3f441d5ff14a16,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e7d27c7d5d2eb44da3f441d5ff14a16, type: 3}
 --- !u!1 &8763822224170147226 stripped

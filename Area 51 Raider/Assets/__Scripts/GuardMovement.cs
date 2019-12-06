@@ -32,19 +32,22 @@ public class GuardMovement : MonoBehaviour
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
         rb2d = GetComponent<Rigidbody2D>();
-        waypoints = new Transform[waypointObjects.Length];
-        for (int i = 0; i < waypoints.Length; i++)
+        if (waypointObjects.Length > 0)
         {
-            waypoints[i] = waypointObjects[i].transform;
-        }
+            waypoints = new Transform[waypointObjects.Length];
+            for (int i = 0; i < waypoints.Length; i++)
+            {
+                waypoints[i] = waypointObjects[i].transform;
+            }
 
-        if (visitsWaypointsRandomly)
-        {
-            startIndex = UnityEngine.Random.Range(0, waypoints.Length);
-        }
+            if (visitsWaypointsRandomly)
+            {
+                startIndex = UnityEngine.Random.Range(0, waypoints.Length);
+            }
 
-        transform.position = waypointObjects[startIndex].transform.position;
-        waypointIndex = startIndex;
+            transform.position = waypointObjects[startIndex].transform.position;
+            waypointIndex = startIndex;
+        }
     }
 
     void Update()
@@ -61,17 +64,21 @@ public class GuardMovement : MonoBehaviour
         }
         else
         {
-            Transform currWaypoint = waypoints[waypointIndex];
-            MoveTowardsTransform(currWaypoint, speed);
-
-            if (Vector2.Distance(transform.position, currWaypoint.position) < 0.1f)
+            if (waypointObjects.Length > 0)
             {
-                if (visitsWaypointsRandomly) {
-                    waypointIndex = UnityEngine.Random.Range(0, waypoints.Length);
-                }
-                else
+                Transform currWaypoint = waypoints[waypointIndex];
+                MoveTowardsTransform(currWaypoint, speed);
+
+                if (Vector2.Distance(transform.position, currWaypoint.position) < 0.1f)
                 {
-                    waypointIndex = (waypointIndex + 1) % waypoints.Length;
+                    if (visitsWaypointsRandomly)
+                    {
+                        waypointIndex = UnityEngine.Random.Range(0, waypoints.Length);
+                    }
+                    else
+                    {
+                        waypointIndex = (waypointIndex + 1) % waypoints.Length;
+                    }
                 }
             }
         }
