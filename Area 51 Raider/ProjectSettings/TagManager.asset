@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - score
+  - Waypoint
+  - score-image
   layers:
   - Default
   - TransparentFX
