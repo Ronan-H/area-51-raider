@@ -23,7 +23,7 @@ public class GuardSearchlight : MonoBehaviour
     {
         lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
-        lineRenderer.widthMultiplier = 0.1f;
+        lineRenderer.widthMultiplier = 0.05f;
         lineRenderer.positionCount = segments;
         lineRenderer.loop = true;
 
