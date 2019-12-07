@@ -9,9 +9,17 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource StrangerThingsMusic;
 
+    private bool soundMuted;
+
     void Start()
     {
+        if (GameObject.FindObjectsOfType<SoundManager>().Length > 1)
+        {
+            Destroy(gameObject);
+        }
+
         LoopStrangerThingsMusic();
+        DontDestroyOnLoad(gameObject);
     }
 
     public void PlayBaDing()
@@ -45,5 +53,16 @@ public class SoundManager : MonoBehaviour
     public void StopStrangerThingsMusic()
     {
         StrangerThingsMusic.Stop();
+    }
+
+    public void OnMusicMuteClicked()
+    {
+        StrangerThingsMusic.mute = !StrangerThingsMusic.mute;
+    }
+
+    public void OnSoundMuteClicked()
+    {
+        BaDing.mute = !BaDing.mute;
+        Siren.mute = !Siren.mute;
     }
 }

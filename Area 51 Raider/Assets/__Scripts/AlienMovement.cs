@@ -26,11 +26,13 @@ public class AlienMovement : MonoBehaviour
         }
         else
         {
-            if (DistToPlayer() < 1.5f)
+            if (DistToPlayer() < 4f)
             {
                 rescued = true;
                 GameState.PlayerSeen = true;
+                GameState.FoundAlien = true;
                 GameObject.FindObjectOfType<SoundManager>().LoopSiren();
+                GameObject.FindGameObjectWithTag("Finish").GetComponent<BoxCollider2D>().isTrigger = true;
             }
         }
     }

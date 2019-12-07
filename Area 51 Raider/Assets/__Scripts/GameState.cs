@@ -5,9 +5,11 @@ using UnityEngine;
 public class GameState : MonoBehaviour
 {
     public static bool PlayerSeen { get; set; }
+    public static bool FoundAlien { get; set; }
 
     public static void ResetAll()
     {
         PlayerSeen = false;
+        GameObject.FindObjectOfType<SoundManager>().StopSiren();
     }
 }
