@@ -9,6 +9,9 @@ public class ItemEffect : MonoBehaviour
 
     [SerializeField]
     private float scaleSpeed = 1;
+
+    [SerializeField]
+    private float scaleFactor = 0.02f;
     
     private float baseSize;
 
@@ -30,7 +33,7 @@ public class ItemEffect : MonoBehaviour
         Color newColor = Color.HSVToRGB(hue, 1, 1);
         gameObject.GetComponent<Renderer>().material.color = newColor;
 
-        float newSize = Mathf.Sin(time * scaleSpeed) * 0.02f + baseSize;
+        float newSize = Mathf.Sin(time * scaleSpeed) * scaleFactor + baseSize;
         transform.localScale = new Vector3(newSize, newSize, 1);
         time += Time.deltaTime;
     }

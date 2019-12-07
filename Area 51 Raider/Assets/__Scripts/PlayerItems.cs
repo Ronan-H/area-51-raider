@@ -14,6 +14,11 @@ public class PlayerItems : MonoBehaviour
     public static void AddItem(string itemName)
     {
         items.Add(itemName);
+
+        if (itemName.StartsWith("Naruto"))
+        {
+            GameState.incScore();
+        }
     }
 
     public static bool HasItem(string itemName)

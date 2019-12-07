@@ -151,7 +151,7 @@ Transform:
   - {fileID: 481132827}
   - {fileID: 469831147}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8341031
 PrefabInstance:
@@ -1316,6 +1316,79 @@ Transform:
   m_Father: {fileID: 1822597853}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &226388026
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1852528627597880958, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_Name
+      value: NarutoSymbol
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7129221
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.204207
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95636004, guid: 757f466bcffb320448166f655512539f, type: 3}
+      propertyPath: itemName
+      value: Naruto3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 757f466bcffb320448166f655512539f, type: 3}
 --- !u!1001 &311933680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3516,7 +3589,7 @@ Transform:
   - {fileID: 214551216}
   - {fileID: 1889582536}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &986874347
 PrefabInstance:
@@ -5226,7 +5299,7 @@ Transform:
   - {fileID: 2081457040}
   - {fileID: 1720733320}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1405552564 stripped
 Transform:
@@ -6045,7 +6118,7 @@ Transform:
   - {fileID: 70490920}
   - {fileID: 93866597}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1835340535
 PrefabInstance:
@@ -6618,7 +6691,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1918028131 stripped
 Transform:

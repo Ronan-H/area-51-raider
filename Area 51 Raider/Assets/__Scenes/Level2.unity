@@ -155,7 +155,7 @@ Transform:
   - {fileID: 917569413}
   - {fileID: 1968857030}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &39798701
 GameObject:
@@ -397,7 +397,7 @@ Transform:
   - {fileID: 2052007835}
   - {fileID: 780427816}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &182311599 stripped
 Transform:
@@ -39203,7 +39203,7 @@ PrefabInstance:
     - target: {fileID: 6784231838532295124, guid: 4ff53d0c74a72c043ab2524792c74a89,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6784231838532295124, guid: 4ff53d0c74a72c043ab2524792c74a89,
         type: 3}
@@ -39384,7 +39384,7 @@ Transform:
   - {fileID: 377037919}
   - {fileID: 851002931}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1007706500
 PrefabInstance:
@@ -39436,7 +39436,7 @@ PrefabInstance:
     - target: {fileID: 8711238818635066781, guid: 4ba839c0f1853a041bbb34b4736d1fbb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8711238818635066781, guid: 4ba839c0f1853a041bbb34b4736d1fbb,
         type: 3}
@@ -39663,7 +39663,7 @@ PrefabInstance:
     - target: {fileID: 6243350000996319734, guid: 96c074ca5e5379147ba025777a95edad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6243350000996319734, guid: 96c074ca5e5379147ba025777a95edad,
         type: 3}
@@ -39841,7 +39841,7 @@ PrefabInstance:
     - target: {fileID: 8492158971031504414, guid: c26f2f1c3244608499ef5557c3c8e7e7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8492158971031504414, guid: c26f2f1c3244608499ef5557c3c8e7e7,
         type: 3}
@@ -40139,6 +40139,79 @@ Transform:
   m_Father: {fileID: 960273877}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1308154712
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1852528627597880958, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_Name
+      value: NarutoSymbol
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.716655
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 35.696877
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852528627597880954, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95636004, guid: 757f466bcffb320448166f655512539f, type: 3}
+      propertyPath: itemName
+      value: Naruto1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 757f466bcffb320448166f655512539f, type: 3}
 --- !u!4 &1339512394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9178104957188137078, guid: 12bdab03070c1c5468cda8f22774e537,
@@ -40254,7 +40327,7 @@ Transform:
   - {fileID: 2041826605}
   - {fileID: 198137916}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1593011793
 PrefabInstance:
@@ -40805,7 +40878,7 @@ Transform:
   - {fileID: 328873164}
   - {fileID: 701279509}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1897087497 stripped
 Transform:
@@ -48821,7 +48894,7 @@ PrefabInstance:
     - target: {fileID: 8763822224170147236, guid: 13ab062448be85844a961a4bc852b511,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8763822224170147236, guid: 13ab062448be85844a961a4bc852b511,
         type: 3}
@@ -48890,7 +48963,7 @@ PrefabInstance:
     - target: {fileID: 3875163098573246479, guid: 954698a68634dc141b05e108aac1055e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3875163098573246479, guid: 954698a68634dc141b05e108aac1055e,
         type: 3}

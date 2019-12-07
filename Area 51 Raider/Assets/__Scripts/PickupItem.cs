@@ -7,6 +7,14 @@ public class PickupItem : MonoBehaviour
     [SerializeField]
     private string itemName;
 
+    private void Start()
+    {
+        if (PlayerItems.HasItem(itemName))
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
