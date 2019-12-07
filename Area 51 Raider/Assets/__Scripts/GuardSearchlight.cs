@@ -10,6 +10,9 @@ public class GuardSearchlight : MonoBehaviour
     [SerializeField]
     private float baseSearchDist;
 
+    [SerializeField]
+    private bool inDarkArea = false;
+
     private float searchDist;
 
     private int segments;
@@ -30,6 +33,11 @@ public class GuardSearchlight : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         playerMovement = player.GetComponent<PlayerMovement>();
         playerBox = player.GetComponent<PlayerBox>();
+
+        if (inDarkArea && PlayerItems.HasItem("Hoodie"))
+        {
+            baseSearchDist /= 2f;
+        }
     }
     
     void Update()
@@ -85,8 +93,7 @@ public class GuardSearchlight : MonoBehaviour
 
     bool CanSeePlayer()
     {
-        // playerMovement.rb2d.velocity.magnitude < 0.5
-        if (playerBox.inBox && Input.GetAxis("Horizontal") <= 0.2 && Input.GetAxis("Vertical") <= 0.2)
+        if (playerBox.inBox && Mathf.Abs(Input.GetAxis("Horizontal")) <= 0.2 && Mathf.Abs(Input.GetAxis("Vertical")) <= 0.2)
         {
             return false;
         }
