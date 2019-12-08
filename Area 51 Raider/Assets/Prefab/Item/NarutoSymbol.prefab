@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &95636004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852528627597880958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d31497ff35bbb0f4b8381ba3a26ac6eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Naruto0
 --- !u!114 &95636024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28,6 +15,19 @@ MonoBehaviour:
   hueInc: 0.6
   scaleSpeed: 5
   scaleFactor: 0.15
+--- !u!114 &5397431519743550299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852528627597880958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31497ff35bbb0f4b8381ba3a26ac6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Naruto
 --- !u!1001 &7415930142859841036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43,12 +43,12 @@ PrefabInstance:
     - target: {fileID: 9178104957188137078, guid: 12bdab03070c1c5468cda8f22774e537,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.44
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 9178104957188137078, guid: 12bdab03070c1c5468cda8f22774e537,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.376
+      value: 17.24
       objectReference: {fileID: 0}
     - target: {fileID: 9178104957188137078, guid: 12bdab03070c1c5468cda8f22774e537,
         type: 3}
@@ -158,6 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 628379680400523062, guid: 12bdab03070c1c5468cda8f22774e537, type: 3}
+    - {fileID: 9178104957188137075, guid: 12bdab03070c1c5468cda8f22774e537, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12bdab03070c1c5468cda8f22774e537, type: 3}
 --- !u!1 &1852528627597880958 stripped
 GameObject:

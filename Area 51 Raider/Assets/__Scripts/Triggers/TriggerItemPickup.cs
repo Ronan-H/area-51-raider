@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PickupItem : MonoBehaviour
+public class TriggerItemPickup : MonoBehaviour
 {
     // allow setting of item name through the editor
     [SerializeField]

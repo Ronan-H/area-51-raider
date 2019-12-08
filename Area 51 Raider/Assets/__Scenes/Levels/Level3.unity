@@ -1375,6 +1375,11 @@ PrefabInstance:
       propertyPath: itemName
       value: Naruto2
       objectReference: {fileID: 0}
+    - target: {fileID: 5397431519743550299, guid: 757f466bcffb320448166f655512539f,
+        type: 3}
+      propertyPath: itemName
+      value: Naruto2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 757f466bcffb320448166f655512539f, type: 3}
 --- !u!1001 &1306648855
@@ -10444,6 +10449,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 579680098880394070, guid: b30938c3a43e93e43a7bb0f144fd1bb1,
+        type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 579680098880394153, guid: b30938c3a43e93e43a7bb0f144fd1bb1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10498,11 +10508,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 579680098880394070, guid: b30938c3a43e93e43a7bb0f144fd1bb1,
-        type: 3}
-      propertyPath: orthographic size
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 579680098880394071, guid: b30938c3a43e93e43a7bb0f144fd1bb1,
         type: 3}

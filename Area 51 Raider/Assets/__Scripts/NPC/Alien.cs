@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class AlienMovement : MonoBehaviour
+public class Alien : MonoBehaviour
 {
     private Transform playerTransform;
     private Rigidbody2D rb2d;
