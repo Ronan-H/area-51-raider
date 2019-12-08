@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TriggerNextLevel : MonoBehaviour
 {
+    // name of scene to load when the player touches this gameobject
     [SerializeField]
     private string sceneName;
 
@@ -12,6 +11,7 @@ public class TriggerNextLevel : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            // player touched trigger, load next level
             SceneManager.LoadScene(sceneName: sceneName);
         }
     }

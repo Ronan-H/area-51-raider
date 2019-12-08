@@ -1,40 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+// visual effects for items that the player can pick up
+// (rainbow colour and scaling)
 public class ItemEffect : MonoBehaviour
 {
+    // speed of hue change
+    // settable through the editor
     [SerializeField]
     private float hueInc = 0.5f;
+    // hue value (updated over time)
+    private float hue = 0;
 
+    // speed of scaling change
+    // settable through the editor
     [SerializeField]
     private float scaleSpeed = 1;
-
+    // how much the item should scale bigger/smaller
+    // settable through the editor
     [SerializeField]
     private float scaleFactor = 0.02f;
-    
+    // normal size of this item before scaling
     private float baseSize;
-
-    private float hue = 0;
-    private Color baseColor;
-    private float time = 0;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
-        baseColor = gameObject.GetComponent<Renderer>().material.color;
+        // set base size
         baseSize = gameObject.transform.localScale.x;
     }
-
-    // Update is called once per frame
+    
+    // update item effect
     void Update()
     {
+        // update hue (to make a rainbow pattern)
         hue = (hue + hueInc * Time.deltaTime) % 1.0f;
         Color newColor = Color.HSVToRGB(hue, 1, 1);
         gameObject.GetComponent<Renderer>().material.color = newColor;
 
-        float newSize = Mathf.Sin(time * scaleSpeed) * scaleFactor + baseSize;
+        // update scale (so the item gets bigger and smaller over time)
+        float newSize = Mathf.Sin(Time.time) * scaleFactor + baseSize;
         transform.localScale = new Vector3(newSize, newSize, 1);
-        time += Time.deltaTime;
     }
 }

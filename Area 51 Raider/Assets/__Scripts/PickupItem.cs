@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
+    // allow setting of item name through the editor
     [SerializeField]
     private string itemName;
 
@@ -11,6 +12,7 @@ public class PickupItem : MonoBehaviour
     {
         if (PlayerItems.HasItem(itemName))
         {
+            // player already has this item, destroy it
             Destroy(gameObject);
         }
     }
@@ -19,8 +21,11 @@ public class PickupItem : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            // give this item to the player
             PlayerItems.AddItem(itemName);
+            // play the item pickup sound effect
             GameObject.FindObjectOfType<SoundManager>().PlayBaDing();
+            // destory this item
             Destroy(gameObject);
         }
     }

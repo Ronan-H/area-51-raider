@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SplashKeyPress : MonoBehaviour
 {
-    // Update is called once per frame
     void Update()
     {
         // wait for any key press
@@ -15,6 +12,7 @@ public class SplashKeyPress : MonoBehaviour
         || Input.GetMouseButtonDown(1)
         || Input.GetMouseButtonDown(2)))
         {
+            // load main menu
             SceneManager.LoadScene(sceneName: "MainMenu");
         }
     }
