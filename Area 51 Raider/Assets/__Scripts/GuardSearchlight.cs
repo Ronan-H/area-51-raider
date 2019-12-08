@@ -34,7 +34,7 @@ public class GuardSearchlight : MonoBehaviour
         playerMovement = player.GetComponent<PlayerMovement>();
         playerBox = player.GetComponent<PlayerBox>();
 
-        if (inDarkArea && PlayerItems.HasItem("Hoodie"))
+        if (inDarkArea && PlayerItems.HasItem("Cloak"))
         {
             baseSearchDist /= 2f;
         }

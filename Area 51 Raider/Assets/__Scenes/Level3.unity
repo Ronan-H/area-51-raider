@@ -1425,7 +1425,7 @@ PrefabInstance:
     - target: {fileID: 765920743896345675, guid: 36cf1177d8922584b96b45fa7d63e53b,
         type: 3}
       propertyPath: itemName
-      value: Hoodie
+      value: Cloak
       objectReference: {fileID: 0}
     - target: {fileID: 8234147296170252543, guid: 36cf1177d8922584b96b45fa7d63e53b,
         type: 3}
